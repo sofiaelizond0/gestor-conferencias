@@ -22,7 +22,7 @@ const RegistrationForm = () => {
     const [submitSuccess, setSubmitSuccess] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/conferencias")
+        fetch("https://gestor-conferencias-backend.onrender.com/api/conferencias")
             .then(res => res.json())
             .then(data => setConferences(data))
             .catch(err => console.error(err));
@@ -84,7 +84,7 @@ const RegistrationForm = () => {
             };
 
             const response = await fetch(
-                "http://localhost:3000/api/registro",
+                "https://gestor-conferencias-backend.onrender.com/api/registro",
                 {
                     method: "POST",
                     headers: {
